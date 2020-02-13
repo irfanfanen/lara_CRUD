@@ -41,7 +41,16 @@
             <input 
                 type="email"
                 name="email" 
-                placeholder="Detail"
+                placeholder="Enter email"
+                class="form-control"
+            >
+        </div>
+        <div class="form-group">
+            <label>Phone</label>
+            <input 
+                type="number"
+                name="phone" 
+                placeholder="Enter Phone"
                 class="form-control"
             >
         </div>

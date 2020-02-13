@@ -15,4 +15,15 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('/nama', function() {
+    $data = 'Nama saya';
+    echo $data;
+});
+
+Route::get('/saya', function() {
+    return view('saya');
+});
+
+Route::get('/siswa', 'StudentController@tampil');
+
 Route::resource('students','StudentController');

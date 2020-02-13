@@ -22,6 +22,7 @@
                 <th>No</th>
                 <th>Name</th>
                 <th>Email</th>
+                <th>Phone</th>
                 <th>Action</th>
             </tr>
             @foreach ($students as $student)
@@ -29,6 +30,7 @@
                     <td>{{ ++$i }}</td>
                     <td>{{ $student->name }}</td>
                     <td>{{ $student->email }}</td>
+                    <td>{{ $student->phone }}</td>
                     <td>
                         <form action="{{ route('students.destroy',$student->id) }}" method="POST">
                             <a class="btn btn-outline-success btn-sm" href="{{ route('students.show',$student->id) }}">
