@@ -45,6 +45,7 @@ class StudentController extends Controller
         $request->validate([
             'name' => 'required',
             'email' => 'required',
+            'phone' => 'required'
         ]);
         $student->update($request->all());
         return redirect()->route('students.index')->with('success','Student updated successfully.');

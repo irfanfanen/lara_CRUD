@@ -49,6 +49,15 @@
                 placeholder="Enter email"
                 class="form-control"
             >
+        <div class="form-group">
+            <label>Phone</label>
+            <input 
+                type="number"
+                name="phone" 
+                value="{{ $student->phone }}"
+                placeholder="Enter phone"
+                class="form-control"
+            >
         </div>
         <button 
             type="submit" 
