@@ -20,17 +20,14 @@ class StudentController extends Controller
 
     public function store(Request $request)
     {
+        $request->validate([
+            'name' => 'required',
+            'email' => 'required',
+            'phone' => 'required'
+        ]);
 
-        $email = $request->email;
-        echo $email;
-        // $request->validate([
-        //     'name' => 'required',
-        //     'email' => 'required',
-        //     'phone' => 'required'
-        // ]);
-
-        // Student::create($request->all());
-        // return redirect()->route('students.index')->with('success','Student created successfully.');
+        Student::create($request->all());
+        return redirect()->route('students.index')->with('success','Student created successfully.');
     }
 
     public function show(Student $student)
@@ -58,9 +55,4 @@ class StudentController extends Controller
         $student->delete();
         return redirect()->route('students.index')->with('success','Student deleted successfully.');
     }
-
-    // public function tampil() {
-    //     // $data = "Nama saya Adalah";
-    //     return view('tampil');
-    // }
 }
